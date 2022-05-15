@@ -11,12 +11,12 @@ public class Window extends JFrame {
     }
 
     public Window() {
-        MainMenu mainMenu = new MainMenu();
         this.setLayout(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        MainMenu mainMenu = new MainMenu();
         this.add(mainMenu);
         this.setVisible(true);
     }

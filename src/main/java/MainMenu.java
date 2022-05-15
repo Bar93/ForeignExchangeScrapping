@@ -1,10 +1,11 @@
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 
-import javax.swing.*;
-import java.awt.*;
-import java.io.IOException;
+        import org.jsoup.Jsoup;
+        import org.jsoup.nodes.Document;
+        import org.jsoup.nodes.Element;
+
+        import javax.swing.*;
+        import java.awt.*;
+        import java.io.IOException;
 
 public class MainMenu extends JPanel {
 
@@ -38,10 +39,10 @@ public class MainMenu extends JPanel {
         this.setLayout(null);
         this.setBounds(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         this.setBackground(Color.CYAN);
-        ImageIcon background = new ImageIcon("background.jpg");
-        JLabel backGround = new JLabel(background);
-        backGround.setBounds(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
-        this.add(backGround);
+//        ImageIcon background = new ImageIcon("background.jpg");
+//        JLabel backGround = new JLabel(background);
+//        backGround.setBounds(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
+//        this.add(backGround);
         mainMenu();
     }
 
@@ -112,10 +113,10 @@ public class MainMenu extends JPanel {
     }
 
     public void convertMenu(int kind) {
+        this.setBackground(Color.GRAY);
         this.convertPanel = new JPanel();
         this.convertPanel.setLayout(null);
         this.convertPanel.setBounds(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-        this.convertPanel.setBackground(Color.GRAY);
         JButton backButton = new JButton("Back");
         backButton.setBounds(WINDOW_WIDTH / 7+50, WINDOW_HEIGHT / 100, BUTTON_WIDTH, BUTTON_HEIGHT);
         JButton convertButton = new JButton("Convert");
@@ -142,6 +143,7 @@ public class MainMenu extends JPanel {
             this.convertPanel.removeAll();
             showMainButton();
             setScrapping(false);
+            this.setBackground(Color.CYAN);
         });
         convertButton.addActionListener((e)->{
             try {
@@ -160,6 +162,7 @@ public class MainMenu extends JPanel {
                 label.setText("Incorrect");
             }
         });
+
     }
 
     public void scrapping(int kind) {
